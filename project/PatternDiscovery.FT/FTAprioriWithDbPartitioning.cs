@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Text;
 using System.Collections.Generic;
-using System.Linq;
 using PatternDiscovery.FrequentPatterns;
 
 namespace PatternDiscovery.FT
