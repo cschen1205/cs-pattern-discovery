@@ -1,21 +1,12 @@
-# cs-pattern-discovery
-
-Pattern Discovery implemented in C#
-
-# Usage
-
-### Apriori
-
-The [sample codes](project/PatternDiscovery.FT/FTApriori.cs) shows how to use Apriori to find the frequent item sets from a transaction database:
-
-```cs 
-using System;
+﻿using System;
+using System.Text;
 using System.Collections.Generic;
+using System.Linq;
 using PatternDiscovery.FrequentPatterns;
 
 namespace PatternDiscovery.FT
 {
-    public class FTApriori
+    public class FTAprioriWithDbPartitioning
     {
         public static void Example()
         {
@@ -25,8 +16,10 @@ namespace PatternDiscovery.FT
             database.Add(new Transaction<char>('b', 'c', 'e') { ID = 30 });
             database.Add(new Transaction<char>('b', 'c', 'e') { ID = 40 });
 
-            Apriori<char> method = new Apriori<char>();
-            ItemSets<char> itemsets = method.MinePatterns(database, 0.5, new List<char>() { 'a', 'b', 'c', 'd', 'e' });
+            AprioriWithDbPartitioning<char> method = new AprioriWithDbPartitioning<char>();
+
+            
+            ItemSets<char> itemsets = method.MinePatterns(database, 0.5, new List<char>() { 'a', 'b', 'c', 'd', 'e' }, 3);
             for (int i = 0; i < itemsets.Count; ++i)
             {
                 ItemSet<char> itemset = itemsets[i];
@@ -36,4 +29,3 @@ namespace PatternDiscovery.FT
         }
     }
 }
-```

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{180E6A4C-EA4C-4DC5-8821-63D9FB958531}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PatternDiscovery</RootNamespace>
+    <AssemblyName>PatternDiscovery</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompressedPatterns\FrequentPatternCompressor.cs" />
+    <Compile Include="FrequentPatterns\Apriori.cs" />
+    <Compile Include="FrequentPatterns\AprioriWithDbPartitioning.cs" />
+    <Compile Include="FrequentPatterns\AprioriWithDHP.cs" />
+    <Compile Include="FrequentPatterns\ClosetPlus.cs" />
+    <Compile Include="FrequentPatterns\Eclat.cs" />
+    <Compile Include="Evaluation.cs" />
+    <Compile Include="FrequentPatterns\FPGrowth.cs" />
+    <Compile Include="FrequentPatterns\FPTree.cs" />
+    <Compile Include="FrequentPatterns\FPTreeNode.cs" />
+    <Compile Include="ItemSet.cs" />
+    <Compile Include="ItemSets.cs" />
+    <Compile Include="MultiLevelPatterns\MultiLevelApriori.cs" />
+    <Compile Include="MultiLevelPatterns\MultiLevelAprioriWithDbPartitioning.cs" />
+    <Compile Include="MultiLevelPatterns\MultiLevelFPGrowth.cs" />
+    <Compile Include="MultiLevelPatterns\MultiLevelItem.cs" />
+    <Compile Include="MultiLevelPatterns\TransactionWithMultiLevelItems.cs" />
+    <Compile Include="Transaction.cs" />
+    <Compile Include="NegativePatterns\NegativeApriori.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
