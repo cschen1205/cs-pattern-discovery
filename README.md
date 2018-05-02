@@ -2,6 +2,12 @@
 
 Pattern Discovery implemented in C#
 
+# Install
+
+```bash
+Install-Package cs-pattern-discovery
+```
+
 # Usage
 
 ### Apriori
