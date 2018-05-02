@@ -1,9 +1,5 @@
 *.user
 *.suo
-*.obj
-*.dll
 *.exe
-*.testsettings
-*.vsmdi
-TestResults/
-packages/
+*.dll
+*.obj

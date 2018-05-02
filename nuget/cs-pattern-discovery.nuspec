@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>cs-pattern-discovery</id>
+    <version>1.0.1</version>
+    <authors>cschen1205</authors>
+    <owners>cschen1205</owners>
+    <licenseUrl>https://github.com/cschen1205/cs-pattern-discovery/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/cschen1205/cs-pattern-discovery</projectUrl>
+    <iconUrl>https://rawgit.com/cschen1205/cs-pattern-discovery/master/icon.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Pattern Discovery Algorithms such as Apriori and FP-Growth</description>
+    <releaseNotes>Pattern Discovery Algorithms such as Apriori and FP-Growth in .NET 4.6.1</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Pattern Discovery Algorithms, Apriori, FP-Growth, c-sharp</tags>
+    <dependencies>
+      
+    </dependencies>
+  </metadata>
+</package>
